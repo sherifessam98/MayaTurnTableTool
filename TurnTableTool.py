@@ -143,6 +143,10 @@ class Window(QWidget):
 
 
 def startup_camera():
+    """
+    Checks if a camera is already created and connects
+    slider values with camera's movement
+    """
     nonStartup = [c for c in cmds.ls(cameras=True) 
                   if not cmds.camera(c, q=True, startupCamera=True)]
 
